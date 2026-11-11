@@ -1,0 +1,10 @@
+{
+  "description": "Connect Lesotho farmers through a community platform for sharing agricultural advice, buying and selling farm products, and receiving seasonal farming insights.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

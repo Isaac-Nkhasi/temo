@@ -1,0 +1,16 @@
+{
+  "name": "temo-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Temo crop-advisory AI: real-weather dataset, model training and evaluation (BIDT3110 Part D)",
+  "scripts": {
+    "fetch": "node src/fetch-weather.ts",
+    "dataset": "node src/build-dataset.ts",
+    "train": "node src/train.ts",
+    "pipeline": "node src/fetch-weather.ts && node src/build-dataset.ts && node src/train.ts"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

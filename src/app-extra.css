@@ -1,0 +1,102 @@
+/* Styles for functionality added on top of the original Figma design (Phase 1). */
+.splash { display: grid; place-items: center; background: var(--cream); }
+.splash .auth-mark { animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: 0.45; } }
+
+.modal textarea {
+  width: 100%; padding: 10px 11px; border: 1px solid var(--line); border-radius: 10px;
+  outline: 0; background: white; color: var(--ink); font-size: 12px; resize: vertical;
+}
+.modal textarea:focus { border-color: var(--green); }
+.form-error { padding: 9px 11px; border-radius: 10px; background: #f8e4df; color: #8c2f20; font-size: 11px; }
+.primary:disabled, .buy-button:disabled, .order-actions button:disabled { opacity: 0.6; cursor: progress; }
+
+.district-filter {
+  display: inline-flex; align-items: center; gap: 4px; padding: 0 6px 0 9px; height: 32px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--forest);
+}
+.district-filter select { border: 0; outline: 0; background: transparent; color: var(--forest); font-size: 11px; font-weight: 700; }
+
+.thread { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); display: grid; gap: 10px; }
+.thread-item { display: grid; grid-template-columns: 34px 1fr; gap: 9px; font-size: 12px; }
+.thread-item p { margin: 2px 0 0; line-height: 1.45; }
+.thread-item small { color: var(--muted); }
+.thread-form { display: flex; gap: 8px; }
+.thread-form input { flex: 1; height: 38px; padding: 0 11px; border: 1px solid var(--line); border-radius: 10px; outline: 0; font-size: 12px; background: white; }
+.thread-form button { width: 38px; height: 38px; display: grid; place-items: center; border: 0; border-radius: 10px; background: var(--forest); color: white; }
+
+.order-note { padding: 14px; border-radius: 12px; background: #edf1e8; color: var(--green); font-size: 12px; font-weight: 600; text-align: center; }
+
+.order-list { display: grid; gap: 11px; }
+.order-card { padding: 14px; border: 1px solid var(--line); border-radius: 15px; background: var(--paper); }
+.order-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.order-top strong { font: 800 14px "Manrope"; color: var(--forest); }
+.order-meta { margin: 5px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.order-meta b { color: var(--ink); }
+.status { padding: 4px 9px; border-radius: 999px; font-size: 9px; font-style: normal; font-weight: 800; background: #edf1e8; color: var(--green); }
+.status.pending { background: #f7ead3; color: #8a5a12; }
+.status.processing { background: #e1ebf3; color: #1f5075; }
+.status.completed { background: #dce9d6; color: var(--forest); }
+.status.cancelled, .status.rejected { background: #f1e1de; color: #8c2f20; }
+.order-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.order-actions:empty { display: none; }
+.order-actions button, .listing-row .ghost {
+  display: inline-flex; align-items: center; gap: 5px; padding: 8px 13px; border: 0; border-radius: 9px;
+  background: var(--forest); color: white; font-size: 11px; font-weight: 700;
+}
+.order-actions .ghost, .listing-row .ghost { border: 1px solid #d5d9d1; background: transparent; color: var(--muted); }
+.listing-row { display: grid; grid-template-columns: 64px 1fr auto; gap: 12px; align-items: center; }
+.listing-row img { width: 64px; height: 64px; object-fit: cover; border-radius: 11px; }
+.listing-row .ghost { padding: 8px; }
+
+.role-chip { display: inline-block; margin: 4px auto 0; padding: 4px 10px; border-radius: 999px; background: #edf1e8; color: var(--green); font-size: 10px; font-weight: 800; }
+.account-email { margin: 16px 0 6px; color: var(--muted); font-size: 11px; text-align: center; }
+.signout { display: block; width: 100%; height: 44px; margin-bottom: 8px; border: 1px solid #e1c4be; border-radius: 12px; background: transparent; color: #8c2f20; font-size: 12px; font-weight: 700; }
+.order-confirmation + .order-note { margin-top: 10px; }
+
+/* ---- Phase 2: privacy & permissions ---- */
+.auth-privacy { font-size: 11px; color: var(--muted); line-height: 1.5; }
+.auth-privacy summary { color: var(--green); font-weight: 700; cursor: pointer; }
+.ask-box input:disabled { cursor: not-allowed; }
+.ask-box button:disabled { opacity: 0.4; }
+.privacy-card { padding: 16px; margin-bottom: 12px; border: 1px solid var(--line); border-radius: 15px; background: var(--paper); }
+.privacy-card h3 { margin: 0 0 6px; color: var(--forest); font: 800 14px "Manrope"; }
+.privacy-card p, .privacy-card li { color: #4e5a54; font-size: 12px; line-height: 1.55; }
+.privacy-card ul { margin: 6px 0 0; padding-left: 18px; }
+.privacy-card button { margin-top: 10px; padding: 10px 14px; border: 0; border-radius: 10px; background: var(--forest); color: white; font-size: 12px; font-weight: 700; }
+.privacy-card button:disabled { opacity: 0.6; cursor: progress; }
+.privacy-card.danger { border-color: #e6c9c3; background: #fdf6f4; }
+.privacy-card.danger h3 { color: #8c2f20; }
+.privacy-card.danger button { background: #a94434; }
+.privacy-card input { width: 100%; height: 42px; margin-top: 8px; padding: 0 11px; border: 1px solid #e1c4be; border-radius: 10px; background: white; font-size: 12px; }
+.consent-row { display: flex; justify-content: space-between; gap: 8px; padding: 7px 0; border-top: 1px solid var(--line); font-size: 11px; color: var(--muted); }
+
+/* ---- Phase 3: blockchain anchoring ---- */
+.chain-line { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); }
+.chain-badge { padding: 3px 8px; border-radius: 999px; font-size: 9px; font-weight: 800; background: #eceff4; color: #4b5a66; }
+.chain-badge.ok { background: #dce9d6; color: var(--forest); }
+.chain-badge.fail { background: #f1e1de; color: #8c2f20; }
+.chain-hash { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: 10px; color: var(--green); text-decoration: none; }
+.chain-line button { padding: 6px 11px; border: 1px solid #d5d9d1; border-radius: 9px; background: transparent; color: var(--muted); font-size: 10px; font-weight: 700; }
+.chain-line button:disabled { opacity: 0.5; cursor: progress; }
+
+/* ---- Phase 4: AI crop advisory (day-ahead frost / heat risk) ---- */
+.advisory-card { margin-top: 18px; padding: 16px; border: 1px solid var(--line); border-radius: 15px; background: var(--paper); }
+.advisory-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.advisory-head h2 { margin: 2px 0 0; color: var(--forest); font: 800 16px "Manrope"; }
+.advisory-note { margin: 12px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.advisory-error { color: #8c2f20; }
+.risk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin-top: 14px; }
+.risk-card { padding: 13px; border-radius: 13px; }
+.risk-card header { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.risk-card header span { font-size: 10px; font-weight: 800; letter-spacing: 0.02em; text-transform: uppercase; }
+.risk-card header strong { padding: 3px 8px; border-radius: 999px; font-size: 9px; font-weight: 800; }
+.risk-clear { background: #eef2ea; }
+.risk-clear header span { color: var(--green); }
+.risk-clear header strong { background: #dce9d6; color: var(--forest); }
+.risk-alert { background: #f7ead3; }
+.risk-alert header span { color: #8a5a12; }
+.risk-alert header strong { background: #8a5a12; color: white; }
+.risk-prob { margin: 8px 0 2px; color: var(--forest); font: 800 24px "Manrope"; }
+.risk-forecast { margin: 0; color: var(--muted); font-size: 10px; }
+.risk-advice { margin: 8px 0 0; color: #4e5a54; font-size: 10.5px; line-height: 1.5; }

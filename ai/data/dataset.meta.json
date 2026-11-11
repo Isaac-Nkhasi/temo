@@ -1,0 +1,119 @@
+{
+  "name": "Temo crop-risk dataset (day-ahead)",
+  "built_at": "2026-11-11T04:33:47.579Z",
+  "rows": 91250,
+  "districts": [
+    {
+      "name": "Maseru",
+      "latitude": -29.31,
+      "longitude": 27.48,
+      "elevation_m": 1717.33
+    },
+    {
+      "name": "Berea",
+      "latitude": -29.2,
+      "longitude": 27.9,
+      "elevation_m": 1920.8
+    },
+    {
+      "name": "Leribe",
+      "latitude": -28.87,
+      "longitude": 28.05,
+      "elevation_m": 1920.8
+    },
+    {
+      "name": "Butha-Buthe",
+      "latitude": -28.77,
+      "longitude": 28.25,
+      "elevation_m": 1920.8
+    },
+    {
+      "name": "Mokhotlong",
+      "latitude": -29.29,
+      "longitude": 29.07,
+      "elevation_m": 2216.09
+    },
+    {
+      "name": "Thaba-Tseka",
+      "latitude": -29.52,
+      "longitude": 28.61,
+      "elevation_m": 2402.33
+    },
+    {
+      "name": "Qacha's Nek",
+      "latitude": -30.11,
+      "longitude": 28.69,
+      "elevation_m": 2115.71
+    },
+    {
+      "name": "Quthing",
+      "latitude": -30.4,
+      "longitude": 27.7,
+      "elevation_m": 1731.03
+    },
+    {
+      "name": "Mohale's Hoek",
+      "latitude": -30.15,
+      "longitude": 27.47,
+      "elevation_m": 1794.65
+    },
+    {
+      "name": "Mafeteng",
+      "latitude": -29.82,
+      "longitude": 27.24,
+      "elevation_m": 1794.65
+    }
+  ],
+  "period": {
+    "start": "2000-01-01",
+    "end": "2024-12-31"
+  },
+  "source": {
+    "provider": "NASA POWER (Prediction Of Worldwide Energy Resources)",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point",
+    "community": "AG (agroclimatology)",
+    "underlying_data": "MERRA-2 reanalysis (NASA Global Modeling and Assimilation Office)",
+    "licence": "NASA POWER data are free and open (CC BY 4.0)",
+    "retrieved_at": [
+      "2026-11-11T04:29:30.011Z",
+      "2026-11-11T04:29:34.590Z",
+      "2026-11-11T04:29:36.982Z",
+      "2026-11-11T04:29:41.395Z",
+      "2026-11-11T04:29:46.085Z",
+      "2026-11-11T04:29:50.489Z",
+      "2026-11-11T04:29:54.929Z",
+      "2026-11-11T04:29:59.642Z",
+      "2026-11-11T04:30:04.438Z",
+      "2026-11-11T04:30:08.970Z"
+    ]
+  },
+  "features": [
+    "elevation_m",
+    "latitude",
+    "tmin",
+    "tmax",
+    "tmean",
+    "tmin_min3",
+    "tmean_mean3",
+    "tmin_delta1",
+    "precip",
+    "precip_sum3",
+    "precip_sum7",
+    "radiation",
+    "rh",
+    "wind",
+    "doy_sin",
+    "doy_cos"
+  ],
+  "labels": {
+    "frost_next": {
+      "definition": "tomorrow tmin <= 2 degC",
+      "positives": 21913
+    },
+    "heat_next": {
+      "definition": "tomorrow tmax >= 30 degC",
+      "positives": 3727
+    }
+  },
+  "notes": "Features use only observations up to and including the row date; labels describe the following day, so the task is genuinely day-ahead forecasting."
+}

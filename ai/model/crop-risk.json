@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "trained_at": "2026-11-11T04:34:04.328Z",
+  "task": "day-ahead agronomic risk for the ten Lesotho districts",
+  "split": {
+    "fit_before": "2013-01-01",
+    "validate_from": "2013-01-01",
+    "test_from": "2016-01-01"
+  },
+  "features": [
+    "elevation_m",
+    "latitude",
+    "tmin",
+    "tmax",
+    "tmean",
+    "tmin_min3",
+    "tmean_mean3",
+    "tmin_delta1",
+    "precip",
+    "precip_sum3",
+    "precip_sum7",
+    "radiation",
+    "rh",
+    "wind",
+    "doy_sin",
+    "doy_cos"
+  ],
+  "districts": [
+    {
+      "name": "Maseru",
+      "latitude": -29.31,
+      "longitude": 27.48,
+      "elevation_m": 1717.33
+    },
+    {
+      "name": "Berea",
+      "latitude": -29.2,
+      "longitude": 27.9,
+      "elevation_m": 1920.8
+    },
+    {
+      "name": "Leribe",
+      "latitude": -28.87,
+      "longitude": 28.05,
+      "elevation_m": 1920.8
+    },
+    {
+      "name": "Butha-Buthe",
+      "latitude": -28.77,
+      "longitude": 28.25,
+      "elevation_m": 1920.8
+    },
+    {
+      "name": "Mokhotlong",
+      "latitude": -29.29,
+      "longitude": 29.07,
+      "elevation_m": 2216.09
+    },
+    {
+      "name": "Thaba-Tseka",
+      "latitude": -29.52,
+      "longitude": 28.61,
+      "elevation_m": 2402.33
+    },
+    {
+      "name": "Qacha's Nek",
+      "latitude": -30.11,
+      "longitude": 28.69,
+      "elevation_m": 2115.71
+    },
+    {
+      "name": "Quthing",
+      "latitude": -30.4,
+      "longitude": 27.7,
+      "elevation_m": 1731.03
+    },
+    {
+      "name": "Mohale's Hoek",
+      "latitude": -30.15,
+      "longitude": 27.47,
+      "elevation_m": 1794.65
+    },
+    {
+      "name": "Mafeteng",
+      "latitude": -29.82,
+      "longitude": 27.24,
+      "elevation_m": 1794.65
+    }
+  ],
+  "scaler": {
+    "mean": [
+      1953.419,
+      -29.544,
+      6.335895,
+      20.444848,
+      12.825264,
+      4.898529,
+      12.824686,
+      0.000373,
+      2.251574,
+      6.753798,
+      15.765527,
+      19.65553,
+      58.849579,
+      2.222155,
+      -0.000051,
+      -0.001105
+    ],
+    "std": [
+      213.461374,
+      0.528019,
+      5.274415,
+      5.643529,
+      5.534602,
+      5.275079,
+      5.38987,
+      2.196256,
+      4.589143,
+      10.365133,
+      18.990487,
+      6.801285,
+      15.377561,
+      0.880426,
+      0.707496,
+      0.706717
+    ]
+  },
+  "agronomic_thresholds_c": {
+    "frost": 2,
+    "heat": 30
+  },
+  "models": {
+    "frost": {
+      "weights": [
+        0.376441,
+        -0.203122,
+        -0.391961,
+        -1.43123,
+        -1.504932,
+        -0.184577,
+        -0.596452,
+        -0.444347,
+        -0.049516,
+        -0.142851,
+        0.005013,
+        0.011466,
+        -0.486103,
+        0.697458,
+        -0.132885,
+        -0.593464
+      ],
+      "bias": -2.83726,
+      "decision_threshold": 0.62
+    },
+    "heat": {
+      "weights": [
+        -0.665381,
+        -0.077644,
+        -0.018236,
+        1.565819,
+        1.125401,
+        -0.002807,
+        0.681972,
+        0.076486,
+        -0.408151,
+        -0.071131,
+        -0.622949,
+        0.543765,
+        -0.262436,
+        -0.088128,
+        -0.10083,
+        0.794532
+      ],
+      "bias": -5.42039,
+      "decision_threshold": 0.91
+    }
+  }
+}

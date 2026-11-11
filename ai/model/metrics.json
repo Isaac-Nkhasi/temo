@@ -1,0 +1,188 @@
+{
+  "trained_at": "2026-11-11T04:34:04.328Z",
+  "split": {
+    "fit_before": "2013-01-01",
+    "validate_from": "2013-01-01",
+    "test_from": "2016-01-01"
+  },
+  "rows": {
+    "total": 91250,
+    "fit": 47430,
+    "validate": 10950,
+    "test": 32870
+  },
+  "results": {
+    "frost": {
+      "label": "frost_next",
+      "model": {
+        "n": 32870,
+        "positives": 7734,
+        "threshold": 0.62,
+        "accuracy": 0.9136598722239124,
+        "precision": 0.772,
+        "recall": 0.8983708301008534,
+        "f1": 0.8304051631409107,
+        "roc_auc": 0.9716065369839328,
+        "confusion": {
+          "tp": 6948,
+          "fp": 2052,
+          "tn": 23084,
+          "fn": 786
+        }
+      },
+      "model_at_0_5": {
+        "n": 32870,
+        "positives": 7734,
+        "threshold": 0.5,
+        "accuracy": 0.9008518405841193,
+        "precision": 0.7233702705400819,
+        "recall": 0.9369019912076545,
+        "f1": 0.8164047095938257,
+        "roc_auc": 0.9716065369839328,
+        "confusion": {
+          "tp": 7246,
+          "fp": 2771,
+          "tn": 22365,
+          "fn": 488
+        }
+      },
+      "persistence_baseline": {
+        "n": 32870,
+        "positives": 7734,
+        "threshold": 0.5,
+        "accuracy": 0.8947368421052632,
+        "precision": 0.7763123868632015,
+        "recall": 0.7763123868632015,
+        "f1": 0.7763123868632015,
+        "roc_auc": 0.8537433990331285,
+        "confusion": {
+          "tp": 6004,
+          "fp": 1730,
+          "tn": 23406,
+          "fn": 1730
+        }
+      },
+      "majority_baseline": {
+        "n": 32870,
+        "positives": 7734,
+        "threshold": 0.5,
+        "accuracy": 0.7647094615150594,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "roc_auc": 0.5,
+        "confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 25136,
+          "fn": 7734
+        }
+      },
+      "weights": {
+        "elevation_m": 0.3764,
+        "latitude": -0.2031,
+        "tmin": -0.392,
+        "tmax": -1.4312,
+        "tmean": -1.5049,
+        "tmin_min3": -0.1846,
+        "tmean_mean3": -0.5965,
+        "tmin_delta1": -0.4443,
+        "precip": -0.0495,
+        "precip_sum3": -0.1429,
+        "precip_sum7": 0.005,
+        "radiation": 0.0115,
+        "rh": -0.4861,
+        "wind": 0.6975,
+        "doy_sin": -0.1329,
+        "doy_cos": -0.5935
+      },
+      "bias": -2.8373
+    },
+    "heat": {
+      "label": "heat_next",
+      "model": {
+        "n": 32870,
+        "positives": 1780,
+        "threshold": 0.91,
+        "accuracy": 0.9609674475205354,
+        "precision": 0.6235703630034809,
+        "recall": 0.7044943820224719,
+        "f1": 0.6615668689000264,
+        "roc_auc": 0.9766921153158102,
+        "confusion": {
+          "tp": 1254,
+          "fp": 757,
+          "tn": 30333,
+          "fn": 526
+        }
+      },
+      "model_at_0_5": {
+        "n": 32870,
+        "positives": 1780,
+        "threshold": 0.5,
+        "accuracy": 0.8877395801642836,
+        "precision": 0.32314814814814813,
+        "recall": 0.9803370786516854,
+        "f1": 0.4860724233983286,
+        "roc_auc": 0.9766921153158102,
+        "confusion": {
+          "tp": 1745,
+          "fp": 3655,
+          "tn": 27435,
+          "fn": 35
+        }
+      },
+      "persistence_baseline": {
+        "n": 32870,
+        "positives": 1780,
+        "threshold": 0.5,
+        "accuracy": 0.9614846364466079,
+        "precision": 0.6440582959641256,
+        "recall": 0.645505617977528,
+        "f1": 0.6447811447811447,
+        "roc_auc": 0.8125405220797901,
+        "confusion": {
+          "tp": 1149,
+          "fp": 635,
+          "tn": 30455,
+          "fn": 631
+        }
+      },
+      "majority_baseline": {
+        "n": 32870,
+        "positives": 1780,
+        "threshold": 0.5,
+        "accuracy": 0.9458472771524186,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "roc_auc": 0.5,
+        "confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 31090,
+          "fn": 1780
+        }
+      },
+      "weights": {
+        "elevation_m": -0.6654,
+        "latitude": -0.0776,
+        "tmin": -0.0182,
+        "tmax": 1.5658,
+        "tmean": 1.1254,
+        "tmin_min3": -0.0028,
+        "tmean_mean3": 0.682,
+        "tmin_delta1": 0.0765,
+        "precip": -0.4082,
+        "precip_sum3": -0.0711,
+        "precip_sum7": -0.6229,
+        "radiation": 0.5438,
+        "rh": -0.2624,
+        "wind": -0.0881,
+        "doy_sin": -0.1008,
+        "doy_cos": 0.7945
+      },
+      "bias": -5.4204
+    }
+  }
+}

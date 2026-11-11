@@ -1,0 +1,3 @@
+node_modules/
+# Raw API responses are large and fully reproducible from the fetch script.
+data/raw/
